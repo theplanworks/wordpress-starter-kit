@@ -22,7 +22,7 @@
             "vendor/scottjs/wp-dotenv/generate-config.sh salts"
         ],
         "migrate" : [
-            "code/scripts/migrate.sh"
+            "@php code/scripts/migrate.php"
         ],
         "post-install-cmd": [
             "code/scripts/copy-env.sh"
