@@ -4,7 +4,8 @@
 /code/build
 node_modules
 
-composer.lock # keep this out for the starter kit
+# keep this out for the starter kit
+composer.lock
 
 ### OSX ###
 .DS_Store

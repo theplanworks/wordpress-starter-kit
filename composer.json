@@ -11,7 +11,8 @@
     "require": {
         "johnpbloch/wordpress": "*",
         "vlucas/phpdotenv": "*",
-        "scottjs/wp-dotenv": "*"
+        "scottjs/wp-dotenv": "*",
+        "interconnectit/search-replace-db": "*"
     },
     "scripts": {
         "generate-config" : [
