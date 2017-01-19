@@ -8,7 +8,13 @@
             "email": "matt.fox@theplanworks.com"
         }
     ],
+    "autoload": {
+        "psr-0": {
+            "thePLAN\\Composer\\": "./code/scripts/"
+        }
+    },
     "require": {
+        "php": ">=5.4",
         "johnpbloch/wordpress": "*",
         "vlucas/phpdotenv": "*",
         "scottjs/wp-dotenv": "*",
@@ -22,9 +28,9 @@
             "vendor/scottjs/wp-dotenv/generate-config.sh salts"
         ],
         "migrate" : [
-            "@php code/scripts/migrate.php"
+            "thePLAN\\Composer\\Scripts::migrate"
         ],
-        "post-install-cmd": [
+        "post-update-cmd": [
             "code/scripts/copy-env.sh"
         ]
     }
