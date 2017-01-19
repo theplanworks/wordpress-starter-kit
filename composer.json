@@ -1,0 +1,27 @@
+{
+    "name": "theplanworks/wordpress-starter-kit",
+    "description": "Create a base Wordpress instance with dotenv support and search and replace",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Matt Fox",
+            "email": "matt.fox@theplanworks.com"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress": "*",
+        "vlucas/phpdotenv": "*",
+        "scottjs/wp-dotenv": "*"
+    },
+    "scripts": {
+        "generate-config" : [
+            "vendor/scottjs/wp-dotenv/generate-config.sh"
+        ],
+        "generate-config-with-salts" : [
+            "vendor/scottjs/wp-dotenv/generate-config.sh salts"
+        ],
+        "migrate" : [
+            "code/scripts/migrate.sh"
+        ]
+    }
+}
