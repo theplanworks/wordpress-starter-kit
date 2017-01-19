@@ -22,6 +22,9 @@
         ],
         "migrate" : [
             "code/scripts/migrate.sh"
+        ],
+        "post-install-cmd": [
+            "code/scripts/copy-env.sh"
         ]
     }
 }
