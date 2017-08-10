@@ -1,7 +1,7 @@
 /vendor/
-/wordpress
-/code/dist
-/code/build
+/public/content/themes
+/public/content/plugins
+/public/wp
 node_modules
 
 # keep this out for the starter kit

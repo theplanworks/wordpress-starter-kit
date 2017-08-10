@@ -6,7 +6,6 @@ This Wordpress Starter Kit uses [Composer](http://getcomposer.org) to create a b
 
 * [WordPress with Composer support](https://github.com/johnpbloch/wordpress)
 * [PHP DotEnv](https://github.com/vlucas/phpdotenv)
-* [WP DotEnv](https://github.com/scottjs/wp-dotenv)
 * [InterconnectIT Search and Replace DB](https://github.com/interconnectit/Search-Replace-DB)
 
 ## Usage

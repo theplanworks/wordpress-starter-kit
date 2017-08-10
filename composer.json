@@ -6,6 +6,10 @@
         {
             "name": "Matt Fox",
             "email": "matt.fox@theplanworks.com"
+        },
+        {
+            "name": "Wilson Bridgett",
+            "email": "wilson.bridgett@theplanworks.com"
         }
     ],
     "autoload": {
@@ -17,21 +21,22 @@
         "php": ">=5.4",
         "johnpbloch/wordpress": "*",
         "vlucas/phpdotenv": "*",
-        "scottjs/wp-dotenv": "*",
         "interconnectit/search-replace-db": "*"
     },
     "scripts": {
-        "generate-config" : [
-            "vendor/scottjs/wp-dotenv/generate-config.sh"
-        ],
-        "generate-config-with-salts" : [
-            "vendor/scottjs/wp-dotenv/generate-config.sh salts"
-        ],
         "migrate" : [
             "thePLAN\\Composer\\Scripts::migrate"
         ],
-        "post-update-cmd": [
-            "code/scripts/copy-env.sh"
+        "post-install-cmd": [
+            "code/scripts/copy-env.sh",
+            "code/scripts/generate-salts.sh"
         ]
+    },
+    "extra": {
+        "wordpress-install-dir": "public/wp",
+        "installer-paths" : {
+            "public/content/plugins/{$name}"   : ["type:wordpress-plugin"],
+            "public/content/themes/{$name}"    : ["type:wordpress-theme"]
+        }
     }
 }
