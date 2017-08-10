@@ -7,6 +7,7 @@ This Wordpress Starter Kit uses [Composer](http://getcomposer.org) to create a b
 * [WordPress with Composer support](https://github.com/johnpbloch/wordpress)
 * [PHP DotEnv](https://github.com/vlucas/phpdotenv)
 * [InterconnectIT Search and Replace DB](https://github.com/interconnectit/Search-Replace-DB)
+* [Laravel Mix](https://github.com/JeffreyWay/laravel-mix)
 
 ## Usage
 
@@ -14,4 +15,9 @@ This Wordpress Starter Kit uses [Composer](http://getcomposer.org) to create a b
 2. Run `composer install`
 3. Update newly-created .env file with your site-specific information (DB Credentials, etc)
 4. Run `composer generate-config-with-salts`
-5. Once you're ready to migrate Wordpress, run `composer migrate`
+5. Run `yarn`
+6. Once you're ready to migrate Wordpress, run `composer migrate`
+
+## Remote file sync
+1. Update .env with host `SYNC_HOST` and folder `SYNC_REMOTE_FOLDER` for site on remote machine.
+2. Run sync via npm `yarn sync` or `npm run sync`
