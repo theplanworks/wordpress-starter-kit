@@ -2,6 +2,8 @@
 /public/content/themes
 /public/content/plugins
 /public/content/uploads
+/public/content/wflogs
+/public/content/updraft
 /public/wp
 node_modules
 
