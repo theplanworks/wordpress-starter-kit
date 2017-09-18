@@ -1,6 +1,7 @@
 /vendor/
 /public/content/themes
 /public/content/plugins
+/public/content/uploads
 /public/wp
 node_modules
 

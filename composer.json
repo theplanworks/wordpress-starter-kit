@@ -1,6 +1,12 @@
 {
     "name": "theplanworks/wordpress-starter-kit",
     "description": "Create a base Wordpress instance with dotenv support and search and replace",
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+    ],
     "type": "project",
     "authors": [
         {
@@ -21,7 +27,9 @@
         "php": ">=5.4",
         "johnpbloch/wordpress": "*",
         "vlucas/phpdotenv": "*",
-        "interconnectit/search-replace-db": "*"
+        "interconnectit/search-replace-db": "*",
+        "wpackagist-plugin/updraftplus": "*",
+        "wpackagist-plugin/wordfence": "*"
     },
     "scripts": {
         "migrate" : [
