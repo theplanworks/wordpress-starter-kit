@@ -20,4 +20,5 @@ This Wordpress Starter Kit uses [Composer](http://getcomposer.org) to create a b
 
 ## Remote file sync
 1. Update .env with host `SYNC_HOST` and folder `SYNC_REMOTE_FOLDER` for site on remote machine.
-2. Run sync via npm `yarn sync` or `npm run sync`
+2. Run sync via npm `yarn sync:up` or `npm run sync:up`
+3. You can also sync files down first with `yarn sync:down`

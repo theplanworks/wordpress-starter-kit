@@ -1,11 +1,17 @@
 #!/bin/bash
 
+BASE="public/content"
+
 source ".env"
 
-rsync -avz public/content/plugins/ forge@$SYNC_HOST:$SYNC_REMOTE_FOLDER/public/content/plugins/
-
-rsync -avzh forge@$SYNC_HOST:$SYNC_REMOTE_FOLDER/public/content/plugins/ public/content/plugins/
-
-rsync -avz public/content/uploads/ forge@$SYNC_HOST:$SYNC_REMOTE_FOLDER/public/content/uploads/
-
-rsync -avzh forge@$SYNC_HOST:$SYNC_REMOTE_FOLDER/public/content/uploads/ public/content/uploads/
+if [ "$1" == "up" ]; then
+    rsync -avz $BASE/plugins/ forge@$SYNC_HOST:$SYNC_REMOTE_FOLDER/$BASE/plugins/
+    rsync -avz $BASE/uploads/ forge@$SYNC_HOST:$SYNC_REMOTE_FOLDER/$BASE/uploads/
+    rsync -avzh forge@$SYNC_HOST:$SYNC_REMOTE_FOLDER/$BASE/plugins/ $BASE/plugins/
+    rsync -avzh forge@$SYNC_HOST:$SYNC_REMOTE_FOLDER/$BASE/uploads/ $BASE/uploads/
+else
+    rsync -avzh forge@$SYNC_HOST:$SYNC_REMOTE_FOLDER/$BASE/plugins/ $BASE/plugins/
+    rsync -avzh forge@$SYNC_HOST:$SYNC_REMOTE_FOLDER/$BASE/uploads/ $BASE/uploads/
+    rsync -avz $BASE/plugins/ forge@$SYNC_HOST:$SYNC_REMOTE_FOLDER/$BASE/plugins/
+    rsync -avz $BASE/uploads/ forge@$SYNC_HOST:$SYNC_REMOTE_FOLDER/$BASE/uploads/
+fi

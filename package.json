@@ -11,7 +11,8 @@
         "watch": "NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
         "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "sync": "chmod +x ./code/scripts/sync.sh && ./code/scripts/sync.sh"
+        "sync:up": "chmod +x ./code/scripts/sync.sh && ./code/scripts/sync.sh up",
+        "sync:down": "chmod +x ./code/scripts/sync.sh && ./code/scripts/sync.sh down"
     },
   "devDependencies": {
     "laravel-mix": "^1.4.2"
