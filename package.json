@@ -7,17 +7,15 @@
   "author": "Wilson Bridgett <wilson.bridgett@theplanworks.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "crossenv NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "crossenv NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "hot": "crossenv NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "crossenv NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "sync:up": "chmod +x ./code/scripts/sync.sh && ./code/scripts/sync.sh up",
     "sync:down": "chmod +x ./code/scripts/sync.sh && ./code/scripts/sync.sh down"
   },
   "devDependencies": {
+    "cross-env": "^5.1.4",
     "laravel-mix": "^1.4.2"
-  },
-  "dependencies": {
-    "crossenv": "^0.0.2-security"
   }
 }
