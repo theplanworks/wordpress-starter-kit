@@ -3,16 +3,16 @@
 // Skeleton project: https://github.com/markjaquith/WordPress-Skeleton
 
 // Load composer autoloader if it's available
-if ( file_exists( __DIR__ . '/../vendor/autoload.php' ) ) {
-	include( __DIR__ . '/../vendor/autoload.php' );
-	$dotenv = new Dotenv\Dotenv(__DIR__ . '/../');
-	$dotenv->load();
+if (file_exists(__DIR__ . '/../vendor/autoload.php')) {
+    include(__DIR__ . '/../vendor/autoload.php');
+    $dotenv = Dotenv\Dotenv::create(__DIR__ . '/../');
+    $dotenv->load();
 }
 
-if(file_exists(dirname(__DIR__) . '/vendor/autoload.php')) {
-	require_once dirname(__DIR__) . '/vendor/autoload.php';
-	$dotenv = new Dotenv\Dotenv(dirname(__DIR__));
-	$dotenv->load();
+if (file_exists(dirname(__DIR__) . '/vendor/autoload.php')) {
+    require_once dirname(__DIR__) . '/vendor/autoload.php';
+    $dotenv = Dotenv\Dotenv::create(dirname(__DIR__));
+    $dotenv->load();
 }
 
 // ** MySQL settings - You can get this info from your web host ** //
@@ -44,14 +44,14 @@ define('DB_COLLATE', '');
  * @since 2.6.0
  */
 
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
+define('AUTH_KEY', 'put your unique phrase here');
+define('SECURE_AUTH_KEY', 'put your unique phrase here');
+define('LOGGED_IN_KEY', 'put your unique phrase here');
+define('NONCE_KEY', 'put your unique phrase here');
+define('AUTH_SALT', 'put your unique phrase here');
 define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
+define('LOGGED_IN_SALT', 'put your unique phrase here');
+define('NONCE_SALT', 'put your unique phrase here');
 /**#@-*/
 
 /**
@@ -77,10 +77,10 @@ $table_prefix  = 'wp_';
  */
 define('WP_DEBUG', getenv('APP_DEBUG') == 'true' ? true : false);
 
-if(getenv('APP_ENV') != 'local') {
-	define('AUTOMATIC_UPDATER_DISABLED', true);
-	define('DISALLOW_FILE_EDIT', true);
-	define('DISALLOW_FILE_MODS', true);
+if (getenv('APP_ENV') != 'local') {
+    define('AUTOMATIC_UPDATER_DISABLED', true);
+    define('DISALLOW_FILE_EDIT', true);
+    define('DISALLOW_FILE_MODS', true);
 }
 
 // ===========================================================================================
@@ -94,13 +94,13 @@ define('WP_HOME', (getenv('APP_SSL') == 'true' ? 'https://' : 'http://') . (gete
 define('WP_SITEURL', (getenv('APP_SSL') == 'true' ? 'https://' : 'http://') . (getenv('APP_WWW') == 'true' ? 'www.' : '') . str_replace('www.', '', $_SERVER['HTTP_HOST']) . getenv('APP_CORE'));
 
 
-define( 'WP_CONTENT_DIR', __DIR__ . '/content' );
-define( 'WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content' );
+define('WP_CONTENT_DIR', __DIR__ . '/content');
+define('WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content');
 
 // ===================
 // Bootstrap WordPress
 // ===================
-if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', __DIR__ . '/wp/' );
+if (! defined('ABSPATH')) {
+    define('ABSPATH', __DIR__ . '/wp/');
 }
-require_once( ABSPATH . 'wp-settings.php' );
+require_once(ABSPATH . 'wp-settings.php');

@@ -16,7 +16,7 @@ const theme = 'public/content/themes/starter';
 mix.js('resources/js/app.js', theme)
    .sass('resources/sass/app.scss', `${theme}/style.css`)
     .copyDirectory('src', theme)
-    .setPublicPath(theme);
+    .setPublicPath('./');
 
 // Full API
 // mix.js(src, output);
