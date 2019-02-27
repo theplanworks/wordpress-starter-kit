@@ -7,13 +7,13 @@ use Dotenv\Dotenv;
 
 class Scripts
 {
-    public static function migrate(Event $event) {
-
+    public static function migrate(Event $event)
+    {
         $composer = $event->getComposer();
         $io = $event->getIO();
 
         $vendorPath = $composer->getConfig()->get('vendor-dir');
-        $dotenv = new Dotenv(dirname($vendorPath));
+        $dotenv = Dotenv::create(dirname($vendorPath));
         $dotenv->load();
 
         // Migrate DB from one domain to another
