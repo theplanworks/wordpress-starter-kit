@@ -23,7 +23,7 @@ class Scripts
 
         exec('php ./vendor/interconnectit/search-replace-db/srdb.cli.php -h ' . getenv('DB_HOST') . ' -n ' . getenv('DB_DATABASE') . ' -u ' . getenv('DB_USERNAME') . ' -p "' . getenv('DB_PASSWORD') . '" -s ' . escapeshellarg($current_url) . ' -r ' . escapeshellarg($dest_url), $output);
 
-        $io->write(implode($output, "\r\n"));
+        $io->write(implode("\r\n", $output));
         $io->write("Done!");
     }
 }
