@@ -15,7 +15,11 @@
     "sync:down": "chmod +x ./code/scripts/sync.sh && ./code/scripts/sync.sh down"
   },
   "devDependencies": {
-    "cross-env": "^5.1.4",
-    "laravel-mix": "^1.4.2"
+    "cross-env": "^5.2.0",
+    "laravel-mix": "^4.0.14",
+    "resolve-url-loader": "2.3.1",
+    "sass": "^1.17.2",
+    "sass-loader": "7.*",
+    "vue-template-compiler": "^2.6.7"
   }
 }
