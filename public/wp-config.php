@@ -5,13 +5,13 @@
 // Load composer autoloader if it's available
 if (file_exists(__DIR__ . '/../vendor/autoload.php')) {
     include(__DIR__ . '/../vendor/autoload.php');
-    $dotenv = Dotenv\Dotenv::create(__DIR__ . '/../');
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
     $dotenv->load();
 }
 
 if (file_exists(dirname(__DIR__) . '/vendor/autoload.php')) {
     require_once dirname(__DIR__) . '/vendor/autoload.php';
-    $dotenv = Dotenv\Dotenv::create(dirname(__DIR__));
+    $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
     $dotenv->load();
 }
 
@@ -100,7 +100,7 @@ define('WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content');
 // ===================
 // Bootstrap WordPress
 // ===================
-if (! defined('ABSPATH')) {
+if (!defined('ABSPATH')) {
     define('ABSPATH', __DIR__ . '/wp/');
 }
 require_once(ABSPATH . 'wp-settings.php');
