@@ -1,25 +1,25 @@
 {
-  "name": "wordpress-starter-kit",
-  "version": "1.0.0",
-  "description": "thePLAN Wordpress Starter Kit",
-  "main": "/resources/js/app.js",
-  "repository": "git@github.com:theplanworks/wordpress-starter-kit.git",
-  "author": "Wilson Bridgett <wilson.bridgett@theplanworks.com>",
-  "license": "MIT",
-  "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "sync:up": "chmod +x ./code/scripts/sync.sh && ./code/scripts/sync.sh up",
-    "sync:down": "chmod +x ./code/scripts/sync.sh && ./code/scripts/sync.sh down"
-  },
-  "devDependencies": {
-    "cross-env": "^5.2.0",
-    "laravel-mix": "^4.0.14",
-    "resolve-url-loader": "2.3.1",
-    "sass": "^1.17.2",
-    "sass-loader": "7.*",
-    "vue-template-compiler": "^2.6.7"
-  }
+    "name": "wordpress-starter-kit",
+    "version": "1.0.0",
+    "description": "thePLAN Wordpress Starter Kit",
+    "main": "/resources/js/app.js",
+    "repository": "git@github.com:theplanworks/wordpress-starter-kit.git",
+    "author": "Wilson Bridgett <wilson.bridgett@theplanworks.com>",
+    "license": "MIT",
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "sync:up": "chmod +x ./code/scripts/sync.sh && ./code/scripts/sync.sh up",
+        "sync:down": "chmod +x ./code/scripts/sync.sh && ./code/scripts/sync.sh down"
+    },
+    "devDependencies": {
+        "cross-env": "^5.2.0",
+        "laravel-mix": "^5.0.4",
+        "resolve-url-loader": "2.3.1",
+        "sass": "^1.17.2",
+        "sass-loader": "7.*",
+        "vue-template-compiler": "^2.6.7"
+    }
 }
