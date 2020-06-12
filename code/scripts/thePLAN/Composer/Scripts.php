@@ -13,7 +13,7 @@ class Scripts
         $io = $event->getIO();
 
         $vendorPath = $composer->getConfig()->get('vendor-dir');
-        $dotenv = Dotenv::create(dirname($vendorPath));
+        $dotenv = Dotenv::createMutable(dirname($vendorPath));
         $dotenv->load();
 
         // Migrate DB from one domain to another
