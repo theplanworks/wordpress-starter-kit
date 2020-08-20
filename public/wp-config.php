@@ -7,9 +7,7 @@ if (file_exists(__DIR__ . '/../vendor/autoload.php')) {
     include(__DIR__ . '/../vendor/autoload.php');
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
     $dotenv->load();
-}
-
-if (file_exists(dirname(__DIR__) . '/vendor/autoload.php')) {
+} else if (file_exists(dirname(__DIR__) . '/vendor/autoload.php')) {
     require_once dirname(__DIR__) . '/vendor/autoload.php';
     $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
     $dotenv->load();
@@ -17,16 +15,16 @@ if (file_exists(dirname(__DIR__) . '/vendor/autoload.php')) {
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', getenv('DB_DATABASE'));
+define('DB_NAME', $_SERVER['DB_DATABASE']);
 
 /** MySQL database username */
-define('DB_USER', getenv('DB_USERNAME'));
+define('DB_USER', $_SERVER['DB_USERNAME']);
 
 /** MySQL database password */
-define('DB_PASSWORD', getenv('DB_PASSWORD'));
+define('DB_PASSWORD', $_SERVER['DB_PASSWORD']);
 
 /** MySQL hostname */
-define('DB_HOST', getenv('DB_HOST'));
+define('DB_HOST', $_SERVER['DB_HOST']);
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -75,9 +73,9 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', getenv('APP_DEBUG') == 'true' ? true : false);
+define('WP_DEBUG', $_SERVER['APP_DEBUG'] == 'true' ? true : false);
 
-if (getenv('APP_ENV') != 'local') {
+if ($_SERVER['APP_ENV'] != 'local') {
     define('AUTOMATIC_UPDATER_DISABLED', true);
     define('DISALLOW_FILE_EDIT', true);
     define('DISALLOW_FILE_MODS', true);
@@ -90,8 +88,8 @@ if (getenv('APP_ENV') != 'local') {
 //define( 'STAGING_DOMAIN', '%%WP_STAGING_DOMAIN%%' ); // Does magic in WP Stack to handle staging domain rewriting
 
 /** Automatically set paths */
-define('WP_HOME', (getenv('APP_SSL') == 'true' ? 'https://' : 'http://') . (getenv('APP_WWW') == 'true' ? 'www.' : '') . str_replace('www.', '', $_SERVER['HTTP_HOST']));
-define('WP_SITEURL', (getenv('APP_SSL') == 'true' ? 'https://' : 'http://') . (getenv('APP_WWW') == 'true' ? 'www.' : '') . str_replace('www.', '', $_SERVER['HTTP_HOST']) . getenv('APP_CORE'));
+define('WP_HOME', ($_SERVER['APP_SSL'] == 'true' ? 'https://' : 'http://') . ($_SERVER['APP_WWW'] == 'true' ? 'www.' : '') . str_replace('www.', '', $_SERVER['HTTP_HOST']));
+define('WP_SITEURL', ($_SERVER['APP_SSL'] == 'true' ? 'https://' : 'http://') . ($_SERVER['APP_WWW'] == 'true' ? 'www.' : '') . str_replace('www.', '', $_SERVER['HTTP_HOST']) . $_SERVER['APP_CORE']);
 
 
 define('WP_CONTENT_DIR', __DIR__ . '/content');
