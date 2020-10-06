@@ -29,7 +29,8 @@
         "vlucas/phpdotenv": "*",
         "interconnectit/search-replace-db": "*",
         "wpackagist-plugin/updraftplus": "*",
-        "wpackagist-plugin/wordfence": "*"
+        "wpackagist-plugin/wordfence": "*",
+        "mindkomm/theme-lib-mix": "^1.1"
     },
     "scripts": {
         "migrate" : [
