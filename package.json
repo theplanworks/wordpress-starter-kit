@@ -7,19 +7,21 @@
     "author": "Wilson Bridgett <wilson.bridgett@theplanworks.com>",
     "license": "MIT",
     "scripts": {
-        "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "production": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "dev": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "production": "mix --production",
         "sync:up": "chmod +x ./code/scripts/sync.sh && ./code/scripts/sync.sh up",
         "sync:down": "chmod +x ./code/scripts/sync.sh && ./code/scripts/sync.sh down"
     },
     "devDependencies": {
-        "cross-env": "^5.2.0",
-        "laravel-mix": "^5.0.4",
+        "cross-env": "^7.0.3",
+        "laravel-mix": "^6.0.13",
+        "postcss": "^8.1",
         "resolve-url-loader": "^3.1.2",
-        "sass": "^1.17.2",
-        "sass-loader": "7.*",
+        "sass": "^1.32.8",
+        "sass-loader": "10.*",
         "vue-template-compiler": "^2.6.7"
     }
 }
