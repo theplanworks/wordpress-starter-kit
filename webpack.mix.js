@@ -14,7 +14,7 @@ let mix = require('laravel-mix');
 const theme = 'public/content/themes/starter';
 
 mix.js('resources/js/app.js', theme)
-    .sass('resources/sass/app.scss', `${theme}/style.css`)
+    .sass('resources/sass/app.scss', 'style.css')
     .copyDirectory('src', theme)
     .setPublicPath(theme);
 
