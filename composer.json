@@ -27,7 +27,6 @@
         "php": ">=5.4",
         "johnpbloch/wordpress": "*",
         "vlucas/phpdotenv": "*",
-        "interconnectit/search-replace-db": "*",
         "wpackagist-plugin/updraftplus": "*",
         "wpackagist-plugin/wordfence": "*",
         "mindkomm/theme-lib-mix": "^1.1"
