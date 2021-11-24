@@ -36,10 +36,10 @@
             "thePLAN\\Composer\\Scripts::migrate"
         ],
         "post-install-cmd": [
-            "code/scripts/copy-env.sh"
+            "./code/scripts/copy-env.sh"
         ],
         "generate-config-with-salts" : [
-            "code/scripts/generate-salts.sh"
+            "./code/scripts/generate-salts.sh"
         ]
 
     },
