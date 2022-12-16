@@ -1,8 +1,41 @@
 /*!
-    Theme Name: thePLAN starter theme
-    Author: thePlan
-    Author URI: http://theplanworks.com
-    Description:
+    Theme Name: WP6 Starter Theme
+    Author: Fahlgren Mortine
+    Author URI: http://fahlgrenmortine.com
     Version: 1
-    Text Domain: domain of the theme
-*/
+    Text Domain: fmwp6
+*/ 
+$themDir: '/content/themes/fmwp6';
+$contentWidth: 1280px;
+$wideWidth: 1440px;
+
+@import 'nav';
+
+
+body{
+    font-family: var(--wp--preset--font-family--montserrat);
+}
+
+
+.page-content{
+    padding-top: 5rem;
+    >*{
+        max-width: $contentWidth;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .alignwide{
+        max-width: $wideWidth;
+        margin-left: auto;
+        margin-right: auto;  
+    }
+
+    .alignfull{
+        max-width: 100%;
+    }
+
+
+}
+
+
