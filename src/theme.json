@@ -1,0 +1,158 @@
+{
+	"version": 2,
+	"settings": {
+        "appearanceTools": true,
+		"color": {
+			"palette": [
+                {
+                    "slug": "black",
+                    "color": "#000000",
+                    "name": "Black"
+                },
+                {
+                    "slug": "grey",
+                    "color": "#555",
+                    "name": "Grey"
+                },
+                {
+                    "slug": "white",
+                    "color": "#ffffff",
+                    "name": "White"
+                },
+                {
+                    "slug": "transparent",
+                    "color": "transparent",
+                    "name": "Transparent"
+                }
+
+            ]
+		},
+        "custom": {
+            "line-height": {
+                "body": 1.5,
+                "heading": 1.17
+            }
+        },
+        "layout": {
+            "contentSize": "1280px",
+            "wideSize": "1440px"
+        },
+        "typography": {
+            "dropCap": false,
+            "fontFamilies": [
+                {
+                    "fontFamily": "\"Montserrat\", sans-serif",
+                    "slug": "montserrat",
+                    "name": "Body Sans-Serif Font (Montserrat)",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Montserrat",
+                            "fontWeight": "400",
+                            "src": [ "file:./fonts/Montserrat-Regular.woff2" ]
+                        },
+                        {
+                            "fontFamily": "Montserrat",
+                            "fontWeight": "700",
+                            "src": [ "file:./fonts/Montserrat-Bold.woff2" ]
+                        }
+                    ]
+                },
+                {
+                    "fontFamily": "\"Anton\", serif",
+                    "slug": "anton",
+                    "name": "Headline Sans-Serif Font (Anton)",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Anton",
+                            "fontWeight": "400",
+                            "src": [ "file:./fonts/Anton-Regular.woff2" ]
+                        }
+                    ]
+                }
+            ],
+            "fontSizes": [
+                {
+                    "name": "Small",
+                    "size": "0.875rem",
+                    "slug": "small"
+                },
+                {
+                    "name": "Medium",
+                    "size": "1rem",
+                    "slug": "medium"
+                },
+                {
+                    "name": "Large",
+                    "size": "2rem",
+                    "slug": "large"
+                },
+                {
+                    "name": "Extra Large",
+                    "size": "3.5rem",
+                    "slug": "x-large"
+                }
+            ]
+        }
+	},
+
+    "styles": {
+        "border": {
+            "radius": "0"
+        },
+        "color": {
+            "background": "var(--wp--preset--color--transparent)",
+            "text": "var(--wp--preset--color--black)"
+        },
+        "elements": {
+            "button": {
+                "border": {
+                    "radius": "8px",
+                    "width": "2px",
+                    "color": "var(--wp--preset--color--black)",
+                    "style": "solid"
+                },
+                "color": {
+                    "background": "var(--wp--preset--color--black)",
+                    "text": "var(--wp--preset--color--white)"
+                },
+                "spacing": {
+                    "padding": {
+                        "top": ".75rem",
+                        "right": "3rem",
+                        "bottom": ".75rem",
+                        "left": "3rem"
+                    }
+                },
+                "typography": {
+                    "fontSize": "var(--wp--preset--font-size--medium)",
+                    "fontFamily": "var(--wp--preset--font-family--anton)"
+                }
+            },
+            "heading": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--anton)",
+                    "fontWeight": "medium",
+                    "lineHeight": "var(--wp--custom--line-height--heading)"
+                }
+            },
+            "link": {
+                "color": {
+                    "text": "var(--wp--preset--color--grey)"
+                },
+                ":hover": {
+                    "color": {
+                        "text": "var(--wp--preset--color--black)"
+                    }
+                }
+            }
+        },
+        "spacing": {
+            "blockGap": "1.5rem"
+        },
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--montserrat)",
+          "lineHeight": "var(--wp--custom--line-height--body)",
+          "fontSize": "var(--wp--preset--font-size--medium)"
+        }
+    }
+}
