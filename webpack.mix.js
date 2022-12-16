@@ -11,10 +11,11 @@ let mix = require('laravel-mix');
  |
  */
 
-const theme = 'public/content/themes/starter';
+const theme = 'public/content/themes/fmwp6';
 
 mix.js('resources/js/app.js', theme)
     .sass('resources/sass/app.scss', 'style.css')
+    .sass('resources/sass/editor.scss', 'editor.css')
     .copyDirectory('src', theme)
     .setPublicPath(theme);
 
